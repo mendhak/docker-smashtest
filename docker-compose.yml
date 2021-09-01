@@ -1,0 +1,27 @@
+
+version: '3.7'
+services:
+  chrome:
+    image: selenium/node-chrome:3.141.59-20210830
+    volumes:
+      - /dev/shm:/dev/shm
+    depends_on:
+      - hub
+    environment:
+      HUB_HOST: hub
+
+  firefox:
+    image: selenium/node-firefox:3.141.59-20210830
+    volumes:
+      - /dev/shm:/dev/shm
+    depends_on:
+      - hub
+    environment:
+      HUB_HOST: hub
+
+  hub:
+    image: selenium/hub:3.141.59-20210830
+    ports:
+      - "4444:4444"
+
+  
