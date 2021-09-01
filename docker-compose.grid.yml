@@ -1,0 +1,35 @@
+
+version: '3.7'
+services:
+    chrome:
+        image: selenium/node-chrome:3.141.59-20210830
+        networks: 
+            - seleniumgrid
+        volumes:
+            - /dev/shm:/dev/shm
+        depends_on:
+            - hub
+        environment:
+            - HUB_HOST=hub
+
+    firefox:
+        image: selenium/node-firefox:3.141.59-20210830
+        networks: 
+            - seleniumgrid        
+        volumes:
+            - /dev/shm:/dev/shm
+        depends_on:
+            - hub
+        environment:
+            - HUB_HOST=hub
+    hub:
+        image: selenium/hub:3.141.59-20210830
+        networks: 
+            - seleniumgrid        
+        ports:
+            - "4444:4444"
+
+networks:
+    seleniumgrid:
+        name: seleniumgrid
+                    
