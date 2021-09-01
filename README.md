@@ -1,7 +1,6 @@
-This Docker image contains the [Smashtest](https://github.com/smashtestio/smashtest) CLI.
+This Docker image contains the [Smashtest](https://github.com/smashtestio/smashtest) CLI.  
 
 It is meant to be run as part of a local Docker development environment, or as part of a CI job, against a Selenium Grid. 
-
 
 Example, if you've got your `.smash` files in the current directory and optionally a `smashtest.json`.  
 
@@ -52,3 +51,9 @@ Then run the Smashtests against that grid
 ```
 docker run -it --network seleniumgrid  -v ${PWD}:/code --rm mendhak/smashtest
 ```
+
+## Motivation
+
+I've created this image because an official one isn't provided.    
+I didn't want to install the package globally as it's [a bad practice](https://code.mendhak.com/npm-install-globally-is-bad/).   
+I wanted to save time on installing the package locally on each test run by just using a container.  
