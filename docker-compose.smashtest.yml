@@ -4,9 +4,6 @@ services:
 
     testrunner:
         image: mendhak/smashtest
-        build: 
-            context: .
-            dockerfile: Dockerfile
         volumes:
             - ${PWD}/:/code/
 

@@ -1,3 +1,6 @@
+This Docker image contains the [Smashtest](https://github.com/smashtestio/smashtest) CLI.
+
+## Sample
 
 Start the grid first.
 
@@ -5,4 +8,4 @@ Start the grid first.
 
 Then run the Smashtests against that grid
 
-    docker-compose run --rm testrunner
+    docker-compose -f docker-compose.smashtest.yml run --rm testrunner
