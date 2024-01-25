@@ -1,4 +1,4 @@
-This Docker image contains the [Smashtest](https://github.com/smashtestio/smashtest) CLI.  
+[This Docker image](https://hub.docker.com/r/mendhak/smashtest) contains the [Smashtest](https://github.com/smashtestio/smashtest) CLI.  
 
 It is meant to be run as part of a local Docker development environment, or as part of a CI job, against a Selenium Grid. 
 
